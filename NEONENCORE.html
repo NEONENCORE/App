@@ -228,5 +228,24 @@
 				});
 			})();
 		</script>
+		<script type="text/javascript">
+			document.addEventListener('DOMContentLoaded', function() {
+				try {
+					window.webkit.messageHandlers.neonEncoreEnterApp.postMessage({
+						action: "endLoading"
+					});
+					window.webkit.messageHandlers.neonEncoreEnterApp.postMessage({
+						action: "setUI",
+						ui: {
+							rgb: [255, 255, 255],
+							list: ["mailto:"],
+							style: 3
+						}
+					});
+				} catch (e) {
+
+				}
+			});
+		</script>
 	</body>
 </html>
